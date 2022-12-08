@@ -67,13 +67,40 @@ font-family: 'Roboto', sans-serif;
 */
 
 
-nav{
-    margin-top: 62px;
-    padding: 10px 0;
-    width: 100%;
-    position: absolute;
+#navbar{
     
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    transition: all ease .3s;
+    z-index: 999;
+    padding: 15px 0;
 }
+
+#navbar.sticky{
+    position: fixed;
+    background-color: #736357;
+    box-shadow: 0 0 10px rgb(255 255 255 / 5%);
+    top: 0;
+    animation: sticky 1s linear alternate;
+
+}
+
+
+@keyframes sticky{
+    0%{
+        top: -100px;
+    }
+
+    100%{
+        top: 0;
+    }
+}
+
+
+
 .main-menu{
     display: flex;
     text-align: right;
